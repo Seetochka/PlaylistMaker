@@ -1,9 +1,8 @@
 package com.practicum.playlistmaker
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -11,22 +10,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val search = findViewById<Button>(R.id.search)
-        search.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на ПОИСК!", Toast.LENGTH_SHORT).show()
+        val settingsButton = findViewById<Button>(R.id.settings)
+        val searchButton = findViewById<Button>(R.id.search)
+        val libraryButton = findViewById<Button>(R.id.library)
+
+        settingsButton.setOnClickListener {
+            val settingsIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsIntent)
         }
 
-        val library = findViewById<Button>(R.id.library)
-        val buttonClickListener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Toast.makeText(this@MainActivity, "Нажали на МЕДИАТЕКА!", Toast.LENGTH_SHORT).show()
-            }
+        searchButton.setOnClickListener {
+            val searchIntent = Intent(this, SearchActivity::class.java)
+            startActivity(searchIntent)
         }
-        library.setOnClickListener(buttonClickListener)
 
-        val settings = findViewById<Button>(R.id.settings)
-        settings.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на НАСТРОЙКИ!", Toast.LENGTH_SHORT).show()
+        libraryButton.setOnClickListener {
+            val libraryIntent = Intent(this, LibraryActivity::class.java)
+            startActivity(libraryIntent)
         }
     }
 }
