@@ -33,7 +33,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/common_text_size"
             app:cornerRadius="16dp"
-            app:icon="@drawable/search"
+            app:icon="@drawable/ic_search_24"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconTint="@color/black" />
@@ -50,7 +50,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/common_text_size"
             app:cornerRadius="16dp"
-            app:icon="@drawable/library"
+            app:icon="@drawable/ic_library_24"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconTint="@color/black" />
@@ -67,7 +67,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/common_text_size"
             app:cornerRadius="16dp"
-            app:icon="@drawable/settings"
+            app:icon="@drawable/ic_settings_24"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconTint="@color/black" />

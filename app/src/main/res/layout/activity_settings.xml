@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
             android:contentDescription="@string/arraw_back_desc"
-            android:src="@drawable/arraw_back" />
+            android:src="@drawable/ic_back_arrow_24" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:contentDescription="@string/share_desc"
-                android:src="@drawable/share" />
+                android:src="@drawable/ic_share_24" />
         </FrameLayout>
 
         <FrameLayout
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:contentDescription="@string/support_desc"
-                android:src="@drawable/support" />
+                android:src="@drawable/ic_support_24" />
         </FrameLayout>
 
         <FrameLayout
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:contentDescription="@string/arraw_forward_desc"
-                android:src="@drawable/arraw_forward" />
+                android:src="@drawable/ic_forward_arraw_24" />
         </FrameLayout>
 
     </LinearLayout>
