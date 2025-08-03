@@ -13,6 +13,18 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 
 class SearchActivity : AppCompatActivity() {
+    private var searchValue: String = SEARCH_DEF
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(SEARCH_VALUE, searchValue)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        searchValue = savedInstanceState.getString(SEARCH_VALUE, SEARCH_DEF)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,6 +43,8 @@ class SearchActivity : AppCompatActivity() {
 
         clearButton.setOnClickListener { searchInput.setText("") }
 
+        searchInput.setText(searchValue)
+
         val simpleTextWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // Nothing to do (^_^)
@@ -41,7 +55,7 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                // Nothing to do (^_^)
+                searchValue = s.toString()
             }
         }
         searchInput.addTextChangedListener(simpleTextWatcher)
@@ -53,5 +67,10 @@ class SearchActivity : AppCompatActivity() {
         } else {
             View.VISIBLE
         }
+    }
+
+    companion object {
+        const val SEARCH_VALUE = "SEARCH_VALUE"
+        const val SEARCH_DEF = ""
     }
 }
