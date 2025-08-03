@@ -20,6 +20,9 @@
             android:src="@drawable/ic_back_arrow_24" />
 
         <TextView style="@style/TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:text="@string/settings" />
     </LinearLayout>
 
@@ -34,9 +37,15 @@
             android:layout_height="wrap_content">
 
             <TextView style="@style/SettingsTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:text="@string/dark_theme" />
 
-            <Switch style="@style/SettingsIconStyle" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"/>
         </FrameLayout>
 
         <FrameLayout
@@ -46,9 +55,15 @@
             android:layout_marginTop="42dp">
 
             <TextView style="@style/SettingsTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:text="@string/share" />
 
-            <ImageView style="@style/SettingsIconStyle"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:contentDescription="@string/share_desc"
                 android:src="@drawable/ic_share_24" />
         </FrameLayout>
@@ -60,9 +75,15 @@
             android:layout_marginTop="42dp">
 
             <TextView style="@style/SettingsTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:text="@string/support" />
 
-            <ImageView style="@style/SettingsIconStyle"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:contentDescription="@string/support_desc"
                 android:src="@drawable/ic_support_24" />
         </FrameLayout>
@@ -74,9 +95,15 @@
             android:layout_marginTop="42dp">
 
             <TextView style="@style/SettingsTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:text="@string/agreement" />
 
-            <ImageView style="@style/SettingsIconStyle"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:contentDescription="@string/arraw_forward_desc"
                 android:src="@drawable/ic_forward_arraw_24" />
         </FrameLayout>

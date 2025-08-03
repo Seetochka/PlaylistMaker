@@ -1,16 +1,17 @@
 package com.practicum.playlistmaker
 
+import android.content.Context
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
+import androidx.core.widget.addTextChangedListener
 
 class SearchActivity : AppCompatActivity() {
     private var searchValue: String = SEARCH_DEF
@@ -41,32 +42,26 @@ class SearchActivity : AppCompatActivity() {
         val clearButton = findViewById<ImageView>(R.id.clearButton)
         val searchInput = findViewById<EditText>(R.id.searchInput)
 
-        clearButton.setOnClickListener { searchInput.setText("") }
+        clearButton.setOnClickListener {
+            searchInput.setText("")
+            hideKeyboard(searchInput)
+        }
 
         searchInput.setText(searchValue)
 
-        val simpleTextWatcher = object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // Nothing to do (^_^)
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                clearButton.visibility = clearButtonVisibility(s)
-            }
-
-            override fun afterTextChanged(s: Editable?) {
+        searchInput.addTextChangedListener(
+            onTextChanged = { s, _, _, _ ->
+                clearButton.isVisible = !s.isNullOrEmpty()
+            },
+            afterTextChanged = { s ->
                 searchValue = s.toString()
             }
-        }
-        searchInput.addTextChangedListener(simpleTextWatcher)
+        )
     }
 
-    private fun clearButtonVisibility(s: CharSequence?): Int {
-        return if (s.isNullOrEmpty()) {
-            View.GONE
-        } else {
-            View.VISIBLE
-        }
+    private fun hideKeyboard(searchInput: EditText) {
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        inputMethodManager?.hideSoftInputFromWindow(searchInput.windowToken, 0)
     }
 
     companion object {
