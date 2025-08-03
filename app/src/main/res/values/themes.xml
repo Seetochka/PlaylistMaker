@@ -6,5 +6,7 @@
         <item name="colorMainBackground">@color/blue</item>
         <item name="colorSettingsIcon">@color/gray</item>
         <item name="colorMainIcon">@color/dark_gray</item>
+        <item name="colorSearchField">@color/light_gray</item>
+        <item name="colorSearchContent">@color/gray</item>
     </style>
 </resources>

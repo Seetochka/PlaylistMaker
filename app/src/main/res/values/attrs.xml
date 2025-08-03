@@ -3,4 +3,6 @@
     <attr name="colorMainBackground" format="reference|color" />
     <attr name="colorSettingsIcon" format="reference|color" />
     <attr name="colorMainIcon" format="reference|color" />
+    <attr name="colorSearchField" format="reference|color" />
+    <attr name="colorSearchContent" format="reference|color" />
 </resources>
