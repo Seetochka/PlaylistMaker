@@ -11,4 +11,10 @@
     <string name="share_desc">share</string>
     <string name="support_desc">support</string>
     <string name="arraw_forward_desc">arraw forward</string>
+    <string name="share_title">Курс «Android-разработчик»</string>
+    <string name="share_link">https://practicum.yandex.com/android-developer</string>
+    <string name="agreement_link">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="support_email">seetochka95@gmail.com</string>
+    <string name="support_subject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="support_text">Спасибо разработчикам и разработчицам за крутое приложение!</string>
 </resources>
