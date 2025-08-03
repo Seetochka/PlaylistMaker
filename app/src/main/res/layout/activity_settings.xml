@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activitySettings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,20 +12,18 @@
         android:layout_marginTop="12dp">
 
         <ImageView
-            android:id="@+id/main"
+            android:id="@+id/backToMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
             android:contentDescription="@string/arraw_back_desc"
             android:src="@drawable/ic_back_arrow_24" />
 
-        <TextView
+        <TextView style="@style/TitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:text="@string/settings"
-            android:textColor="@color/black"
-            android:textSize="@dimen/common_text_size" />
+            android:text="@string/settings" />
     </LinearLayout>
 
     <LinearLayout
@@ -37,13 +36,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <TextView style="@style/SettingsTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="@string/dark_theme"
-                android:textColor="@color/black"
-                android:textSize="@dimen/settings_text_size" />
+                android:text="@string/dark_theme" />
 
             <Switch
                 android:layout_width="wrap_content"
@@ -52,17 +49,16 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/shareButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="42dp">
 
-            <TextView
+            <TextView style="@style/SettingsTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="@string/share"
-                android:textColor="@color/black"
-                android:textSize="@dimen/settings_text_size" />
+                android:text="@string/share" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -73,17 +69,16 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/supportButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="42dp">
 
-            <TextView
+            <TextView style="@style/SettingsTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="@string/support"
-                android:textColor="@color/black"
-                android:textSize="@dimen/settings_text_size" />
+                android:text="@string/support" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -94,17 +89,16 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/agreementButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="42dp">
 
-            <TextView
+            <TextView style="@style/SettingsTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:text="@string/agreement"
-                android:textColor="@color/black"
-                android:textSize="@dimen/settings_text_size" />
+                android:text="@string/agreement" />
 
             <ImageView
                 android:layout_width="wrap_content"
