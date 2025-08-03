@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorMainBackground" format="reference|color" />
+    <attr name="colorSettingsIcon" format="reference|color" />
+    <attr name="colorMainIcon" format="reference|color" />
+</resources>
